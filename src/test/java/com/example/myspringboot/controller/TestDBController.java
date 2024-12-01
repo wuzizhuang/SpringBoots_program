@@ -16,7 +16,7 @@ public class TestDBController {
     public String testConnection() {
         try {
             // 测试执行一个简单的查询
-            String result = jdbcTemplate.queryForObject("SELECT 1", String.class);
+            jdbcTemplate.queryForObject("SELECT 1", String.class);
             return "数据库连接成功！";
         } catch (Exception e) {
             return "数据库连接失败：" + e.getMessage();
